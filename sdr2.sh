@@ -19,7 +19,7 @@ cd ..
 cd ..
 
 # Now we build the SDRPlay module for Soapy
-
+pwd
 cd SoapySDRPlay || exit
 ./sub1.sh
 #mkdir build
