@@ -1,6 +1,4 @@
-#/* script 2 below /*
-
-#! /bin/bash
+#!/bin/bash
 # This script should install and build all needed stuff for
 # using the SDRPlay on Ubuntu 16.04 or later.  It must be
 # run as root. 
@@ -8,9 +6,11 @@
 # This is part two.
 # Here we build SoapySDR
 
-cd SoapySDR
+#cd SoapySDR
+cd SoapySDR || exit
 mkdir build
-cd build
+#cd build
+cd build || exit
 cmake ..
 make -j4
 make install
@@ -20,9 +20,9 @@ cd ..
 
 # Now we build the SDRPlay module for Soapy
 
-cd SoapySDRPlay
+cd SoapySDRPlay || exit
 mkdir build
-cd build
+cd build || exit
 cmake ..
 make
 make install
@@ -31,20 +31,20 @@ cd ..
 
 # And we build SoapyRemote
 
-cd SoapyRemote
+cd SoapyRemote || exit
 mkdir build
-cd build
+cd build || exit
 cmake ..
 make
 make install
 cd ..
 cd ..
 
-# And finally,  we build Cubic.  This takes awhile!
+# And finally,  we build Cubic.  This takes a while!
 
-cd CubicSDR
+cd CubicSDR || exit
 mkdir build
-cd build
+cd build || exit
 cmake ../ -DCMAKE_BUILD_TYPE=Release -DwxWidgets_CONFIG_EXECUTABLE=~/Develop/wxWidgets-staticlib/bin/wx-config
 make
 make install

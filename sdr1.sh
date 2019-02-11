@@ -1,9 +1,10 @@
-#! /bin/bash
+#!/bin/bash
 # This script should install and build all needed stuff for
 # using the SDRPlay on Ubuntu 16.04 or later.  It must be
 # run as root. 
 #
-# First we install needed dependancies.
+# First we install needed dependencies.
+# MJH : determine where to run from e.g. home dir OR script dir
 
 apt-get install git build-essential automake cmake g++ swig
 apt-get install libgtk2.0-dev libpulse-dev libpython-dev python-numpy.
@@ -21,7 +22,7 @@ git clone https://github.com/cjcliffe/CubicSDR.git
 
 # Build liquid-dsp
 
-cd liquid-dsp
+cd liquid-dsp || exit
 ./bootstrap.sh
 ./configure --enable-fftoverride
 make -j4
