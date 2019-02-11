@@ -12,7 +12,8 @@ apt-get install mesa-utils libeglw1-mesa libglw1-mesa-dev
 apt-get install freeglut3-dev freeglut3
 
 # Now we'll git the projects we need
-
+# but first CD to home directory : force a fixed location 
+cd ~/ || exit
 git clone https://github.com/jgaeddert/liquid-dsp
 
 git clone https://github.com/pothosware/SoapySDR.git
