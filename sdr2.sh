@@ -15,8 +15,8 @@ cd SoapySDR || exit
 ##*make -j4
 ##*make install
 ##*ldconfig
-##*cd ..
-##*cd ..
+cd ..
+cd ..
 
 # Now we build the SDRPlay module for Soapy
 
