@@ -5,5 +5,5 @@ cd build || exit
 cmake ..
 make
 make install
-cd ..
-cd ..
+#cd ..
+#cd ..
