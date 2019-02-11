@@ -7,7 +7,7 @@
 # Here we build SoapySDR
 
 #cd SoapySDR
-cd SoapySDR || exit
+cd ~/SoapySDR || exit
 ##*mkdir build
 #cd build
 ##*cd build || exit
@@ -15,12 +15,12 @@ cd SoapySDR || exit
 ##*make -j4
 ##*make install
 ##*ldconfig
-cd ..
-cd ..
+#cd ..
+#cd ..
 
 # Now we build the SDRPlay module for Soapy
 pwd
-cd SoapySDRPlay || exit
+cd ~/SoapySDRPlay || exit
 ./sub1.sh
 #mkdir build
 #cd build || exit
@@ -32,7 +32,7 @@ cd SoapySDRPlay || exit
 
 # And we build SoapyRemote
 
-cd SoapyRemote || exit
+cd ~/SoapyRemote || exit
 ./sub1.sh
 #mkdir build
 #cd build || exit
